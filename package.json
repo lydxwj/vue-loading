@@ -1,0 +1,29 @@
+{
+  "name": "lydxwj-loading",
+  "version": "0.1.0",
+  "private": false,
+  "description": "基于 Vue 的加载页组件",
+  "main": "lib/index.js",
+  "author": "lyd",
+  "license": "MIT",
+  "keyword": "loading vue_loading",
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "publish": "vue-cli-service build --target lib --name index --dest lib src/components/index.js",
+    "prepare": "npm run publish"
+  },
+  "dependencies": {
+    "@lydxwj/resource": "0.0.1",
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
