@@ -1,6 +1,5 @@
 <template>
-  <div class="hello">
-    <h1>{{ per }}</h1>
+  <div class="loading">
     <slot :progress="per"></slot>
   </div>
 </template>
@@ -17,29 +16,32 @@ export default {
   props: {
     time: Number,
     srcList: Array,
+    percent: Function,
+    complete: Function,
+    fail: Function,
   },
   methods: {
-    upData() {
-      this.loading();
-    },
     loading() {
       const _this = this;
       resource.load({
         srcList: this.srcList,
         percentCb(per) {
           _this.per = per;
+          if (_this.percent) {
+            _this.percent(per);
+          }
         },
-        completeCb() {
-
-        }
+        completeCb: this.complete,
+        failCb: this.fail,
+        time: this.time,
       });
     }
   },
   mounted() {
-    this.upData();
+    this.loading();
   }
 }
 </script>
-<style scoped lang="stylus">
+<style lang="stylus">
 
 </style>

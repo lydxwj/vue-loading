@@ -1,9 +1,9 @@
 {
-  "name": "lydxwj-loading",
+  "name": "@lydxwj/vue-loading",
   "version": "0.1.0",
   "private": false,
   "description": "基于 Vue 的加载页组件",
-  "main": "lib/index.js",
+  "main": "lib/index.umd.min.js",
   "author": "lyd",
   "license": "MIT",
   "keyword": "loading vue_loading",
@@ -15,7 +15,7 @@
     "prepare": "npm run publish"
   },
   "dependencies": {
-    "@lydxwj/resource": "0.0.1",
+    "@lydxwj/resource": "0.1.0",
     "core-js": "^2.6.5",
     "vue": "^2.6.10"
   },
